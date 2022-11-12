@@ -1,0 +1,29 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<tearTate &le; 0.5<br/>gini = 0.609<br/>samples = 19<br/>value = [10, 5, 4]<br/>class = soft>, fillcolor="#f6d2b8"] ;
+1 [label=<gini = 0.0<br/>samples = 8<br/>value = [8, 0, 0]<br/>class = soft>, fillcolor="#e58139"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<astigmatic &le; 0.5<br/>gini = 0.628<br/>samples = 11<br/>value = [2, 5, 4]<br/>class = hard>, fillcolor="#e3fbed"] ;
+0 -> 2 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+3 [label=<prescript &le; 0.5<br/>gini = 0.32<br/>samples = 5<br/>value = [1, 0, 4]<br/>class = no lenses>, fillcolor="#a06aec"] ;
+2 -> 3 ;
+4 [label=<age &le; 1.5<br/>gini = 0.5<br/>samples = 2<br/>value = [1, 0, 1]<br/>class = soft>, fillcolor="#ffffff"] ;
+3 -> 4 ;
+5 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0]<br/>class = soft>, fillcolor="#e58139"] ;
+4 -> 5 ;
+6 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 0, 1]<br/>class = no lenses>, fillcolor="#8139e5"] ;
+4 -> 6 ;
+7 [label=<gini = 0.0<br/>samples = 3<br/>value = [0, 0, 3]<br/>class = no lenses>, fillcolor="#8139e5"] ;
+3 -> 7 ;
+8 [label=<age &le; 0.5<br/>gini = 0.278<br/>samples = 6<br/>value = [1, 5, 0]<br/>class = hard>, fillcolor="#61ea9a"] ;
+2 -> 8 ;
+9 [label=<prescript &le; 0.5<br/>gini = 0.5<br/>samples = 2<br/>value = [1, 1, 0]<br/>class = soft>, fillcolor="#ffffff"] ;
+8 -> 9 ;
+10 [label=<gini = 0.0<br/>samples = 1<br/>value = [0, 1, 0]<br/>class = hard>, fillcolor="#39e581"] ;
+9 -> 10 ;
+11 [label=<gini = 0.0<br/>samples = 1<br/>value = [1, 0, 0]<br/>class = soft>, fillcolor="#e58139"] ;
+9 -> 11 ;
+12 [label=<gini = 0.0<br/>samples = 4<br/>value = [0, 4, 0]<br/>class = hard>, fillcolor="#39e581"] ;
+8 -> 12 ;
+}
